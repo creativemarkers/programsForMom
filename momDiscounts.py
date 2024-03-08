@@ -9,7 +9,7 @@ def main():
     discountableTotal = 0
 
     for i in range(itemAmount):
-        priceOfItem = float(input("What is the price of billable item #" + str(i+1) + "before discounts:"))
+        priceOfItem = float(input("What is the price of billable item #" + str(i+1) + " before discounts:"))
         discount = input("Is the item discountable?(y/n)")
         discount.lower()
 
@@ -23,9 +23,11 @@ def main():
 
     print("your estimated discount percent is:", percentToDiscount)
 
+    print((discountableTotal * percentToDiscount) + nonDiscountableTotal)
+
 
 if __name__ == "__main__":
     main()
-
+    input("Press Enter to exit...")
 
 
